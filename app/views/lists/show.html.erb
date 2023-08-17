@@ -1,0 +1,12 @@
+<h2><%= @list.name %></h2>
+<div class="d-flex inline">
+<% @list.movies.each do |movie| %>
+<div class= "card col-3">
+<%= movie.title %>
+<%= image_tag movie.poster_url, alt: "movie-poster", width: 100 %>
+<p>"Movie-Rating:"<%= movie.rating %></p>
+<p>"Movie-Overview:"</p>
+<%= movie.overview %>
+</div>
+</div>
+<% end %>
